@@ -1,0 +1,56 @@
+{
+  "request": {
+    "notifications": [
+      {
+        "type": "email",
+        "action": {
+          "template": {
+            "id": "template_002",
+            "data": "<html><body><h1>Reminder</h1><p>This is a reminder for your upcoming event. Please make sure to check your schedule.</p></body></html>",
+            "type": "HTML",
+            "config": {
+              "sender": "kunalyadav.adt@gmail.com",
+              "subject": "Reminder",
+              "toEmail": [
+                "kunalyadav.adt@gmail.com"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "email",
+        "action": {
+          "template": {
+            "id": "template_001",
+            "type": "Body",
+            "config": {
+              "sender": "kunalyadav.adt@gmail.com",
+              "subject": "Reminder",
+              "toEmail": [
+                "kunalyadav.adt@gmail.com"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "email",
+        "action": {
+          "template": {
+            "id": "template_002",
+            "data": "<html><body><h1>Reminder</h1><p>testing check.</p></body></html>",
+            "type": "HTML",
+            "config": {
+              "sender": "kunalyadav.adt@gmail.com",
+              "subject": "Reminder",
+              "toEmail": [
+                "kunalyadav.adt@gmail.com"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

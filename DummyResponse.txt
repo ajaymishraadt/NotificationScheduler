@@ -1,0 +1,60 @@
+{
+  "request": {
+    "notifications": [
+      {
+        "notificationId": "976277c6-e2a2-4e86-8ae6-eca58bf586c1",
+        "type": "email",
+        "action": {
+          "template": {
+            "id": "template_002",
+            "data": "<html><body><h1>Reminder</h1><p>This is a reminder for your upcoming event. Please make sure to check your schedule.</p></body></html>",
+            "type": "HTML",
+            "config": {
+              "sender": "kunalyadav.adt@gmail.com",
+              "subject": "Reminder",
+              "toEmail": [
+                "kunalyadav.adt@gmail.com"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "notificationId": "19bbdb08-7afd-4109-a44f-9946a93ea43b",
+        "type": "email",
+        "action": {
+          "template": {
+            "id": "template_001",
+            "data": "<html><body><h1>Welcome!</h1><p>Welcome to our service. We are glad to have you with us.</p></body></html>",
+            "type": "HTML",
+            "config": {
+              "sender": "kunalyadav.adt@gmail.com",
+              "subject": "Reminder",
+              "toEmail": [
+                "kunalyadav.adt@gmail.com"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "notificationId": "45e4b6c4-e1f6-4580-afc9-434428783ab1",
+        "type": "email",
+        "action": {
+          "template": {
+            "id": "template_002",
+            "data": "<html><body><h1>Reminder</h1><p>testing check.</p></body></html>",
+            "type": "HTML",
+            "config": {
+              "sender": "kunalyadav.adt@gmail.com",
+              "subject": "Reminder",
+              "toEmail": [
+                "kunalyadav.adt@gmail.com"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}
