@@ -1,0 +1,42 @@
+-- Creating schema "notification"
+CREATE SCHEMA notification;
+
+-- Creating Template table in the notification schema
+CREATE TABLE notification.Template (
+    id SERIAL PRIMARY KEY,
+    template_id VARCHAR(255) NOT NULL UNIQUE,
+    subject VARCHAR(255) NOT NULL,
+    body TEXT NOT NULL
+);
+
+-- Creating User table in the notification schema
+CREATE TABLE notification."User" (
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE
+);
+
+-- Creating Subscription table in the notification schema
+CREATE TABLE notification.Subscription (
+    user_id INT NOT NULL,
+    template_id VARCHAR(255) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES notification.User (id) ON DELETE CASCADE,
+    FOREIGN KEY (template_id) REFERENCES notification.Template (template_id) ON DELETE CASCADE
+);
+
+-- Inserting records into Template table with HTML content
+INSERT INTO notification.Template (template_id, subject, body) VALUES 
+('template_001', 'Welcome!', '<html><body><h1>Welcome!</h1><p>Welcome to our service. We are glad to have you with us.</p></body></html>'),
+('template_002', 'Reminder', '<html><body><h1>Reminder</h1><p>This is a reminder for your upcoming event. Please make sure to check your schedule.</p></body></html>');
+
+-- Inserting records into User table
+INSERT INTO notification.User (first_name, last_name, email) VALUES 
+('Kunal', 'Yadav', 'kunalyadav.adt@gmail.com'),
+('Ajay', 'Mishra', 'ajaymishra.adt@gmail.com');
+
+-- Inserting records into Subscription table
+INSERT INTO notification.Subscription (user_id, template_id) VALUES 
+(1, 'template_001'),
+(1, 'template_002'),
+(2, 'template_001');
